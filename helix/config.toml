@@ -1,0 +1,49 @@
+theme="base16_transparent"
+
+[editor]
+line-number = "relative"
+mouse = true
+color-modes = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.smart-tab]
+enable = false
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name", "position"]
+right = ["diagnostics", "selections", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+C-s=":w"
+C-r = ":config-reload"
+C-o=":open ~/.config/helix/config.toml"
+C-l=":open ~/.config/helix/languages.toml"
+C-f=["search"]
+"D" = [ "select_mode", "goto_line_end", "yank_main_selection_to_clipboard", "delete_selection", ]
+"w"."i"."d" = [ "move_char_right", "move_prev_word_start", "move_next_word_end", "yank_main_selection_to_clipboard", "delete_selection", ]
+"w"."i"."c" = [ "move_char_right", "move_prev_word_start", "move_next_word_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode", ]
