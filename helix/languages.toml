@@ -21,7 +21,7 @@ command = "golangci-lint-langserver"
 command = ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
 
 [language-server.discord-lsp]
-command = "/home/zeroo/Projects/Go/discord-rpc-lsp/discord-rpc-lsp"
+command = "/home/zeroo/Project/Go/discord-rpc-lsp/discord-rpc-lsp"
 
 # Html Configuration
 [[language]]

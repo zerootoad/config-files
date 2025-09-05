@@ -7,6 +7,3 @@ CURRENTDATEONLY=`date +"%a %B %d %H:%M:%S"`
 
 echo ${CURRENTDATEONLY}
 
-case $BUTTON in
-     1) notify-send -t 2000 "$(uptime -p)" ;;
-esac

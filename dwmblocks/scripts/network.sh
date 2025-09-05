@@ -4,9 +4,6 @@
 # transmitted (TX) since the previous time this script ran. So if run every
 # second, gives network traffic per second.
 
-case $BUTTON in
-     1) st nmtui & ;;
-esac
 update() {
     sum=0
     for arg; do

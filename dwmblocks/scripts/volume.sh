@@ -1,11 +1,13 @@
 #!/bin/sh
-vol="$(pamixer --get-volume)"
 
-mute="$(pamixer --get-mute)"
+# Get the volume percentage
+vol=$(amixer sget Master | awk -F"[][]" '/dB/ { print $2 }')
 
-if [ "$mute" == "true" ]; then
-	echo "Muted"
+# Check if muted
+mute=$(amixer get Master | grep '\[off\]')
+
+if [ -n "$mute" ]; then
+    echo "Muted"
 else
-	echo "$vol%"
+    echo "$vol"
 fi
-

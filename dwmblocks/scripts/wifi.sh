@@ -7,8 +7,3 @@ if [ $? -eq 0 ]; then
 else
     echo "Disconnected"
 fi
-
-case $BUTTON in
-     1) st nmtui & ;;
-     3) notify-send -t 2000 "$(iwgetid -r)" ;;
-esac
